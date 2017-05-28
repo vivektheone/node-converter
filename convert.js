@@ -13,20 +13,15 @@ csv({
     datas.push(row);
 })
 .on('done',()=>{
-   console.log(datas);
    var csvStream = fastCsv.createWriteStream({headers: true}),
    writableStream = fs.createWriteStream("output.csv");
    csvStream.pipe(writableStream);
    lodash.forEach(datas, function(value) {
      csvStream.write(value);
-     console.log(value);
    });
-   
    writableStream.on("finish", function(){
      console.log("DONE!");
-   });
- 
+   }); 
    csvStream.pipe(writableStream);
    csvStream.end();
-
 });
