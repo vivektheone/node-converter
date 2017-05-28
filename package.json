@@ -1,0 +1,20 @@
+{
+  "name": "node-converter",
+  "version": "1.0.0",
+  "description": "Converts csv's to processed csvs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "convert",
+    "csvtojson",
+    "jsontocsv"
+  ],
+  "author": "Vivek",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^1.1.6",
+    "fast-csv": "^2.4.0"
+  }
+}
